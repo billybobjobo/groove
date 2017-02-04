@@ -1,0 +1,258 @@
+// Box-sizing
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 12.5px;
+  @media screen and ( min-height: 420px ) {
+    font-size: 3vh;
+  }
+}
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+// Colors
+$yellow: rgb(255, 225, 81);
+$black: rgb(20,20,20);
+$gray: rgb(150,150,150);
+$lite-gray: rgb(180,180,180);
+$white: rgb(255,255,255);
+
+// Breakpoints
+$desktop: 769px;
+
+// Global
+body{
+  background-color: $yellow;
+  text-align: center;
+  text-transform: uppercase;
+  @extend %font;
+}
+%font{
+  color: $black;
+  font-family: 'Share Tech Mono';
+  letter-spacing: -0.1em;
+}
+.wrapper{
+  position: relative;
+  margin: auto;
+  width: 15rem;
+}
+.section {
+  margin: auto;
+  text-align: left;
+  position: relative;
+  max-width: 13rem;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  &.onoff{
+    margin-top: 1rem;
+    max-width: 15rem;
+    transform: translateX(1rem);
+  }
+}
+
+//Loading
+.loading{
+  position: fixed;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: $yellow;
+  transition: opacity 0.2s, visibility 0s 0.2s;
+  h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// Buttons
+%button-hover {
+  &:hover{
+    cursor: pointer;
+    @media screen and (min-width: $desktop) {background: $lite-gray;}
+  }
+}
+button{
+  position: relative;
+  border: $black 2px solid;
+  background-color: $gray;
+  color: $black;
+  font-family: 'Share Tech Mono';
+  letter-spacing: -0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  @extend %button-hover;
+  &.on{
+    background-color: $white;
+  }
+  &.-big {
+    padding: 0.5em;
+    min-height: 4rem;
+    min-width: 4rem;
+  }
+}
+
+//Spinners
+.ui-spinner {
+  float: right;
+  transform: translateY(-.7rem);
+  display: inline-block;
+  border: 2px solid $black;
+  border-radius: 0;
+  background: $white;
+  height: 2.2rem !important; // Have to override jquery ui's direct element styling
+  .ui-spinner-input {
+    @extend %font;
+    font-size: 1rem;
+    width: 3rem;
+    text-align: center;
+    margin-left: 0; margin-right: 0;
+  }
+  .ui-spinner-button {
+    position: relative;
+    display: inline-block;
+    background: $gray;
+    border-radius: 0;
+    width: 2rem;
+    height: 2.2rem;
+    border: 2px solid $black;
+    @extend %button-hover;
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-60%);
+      color: $black;
+    }
+  }
+}
+
+// Sliders
+.slider {
+  margin-top: 1rem;
+  border: $black 2px solid;
+  border-radius: 0;
+  background-color: $gray;
+  background-image: none;
+  &:hover{
+    cursor: pointer;
+  }
+  .ui-slider-range {
+    border-radius: 0;
+    background-color: $white;
+    background-image: none;
+  }
+  .ui-slider-handle {
+    border: $black 2px solid;
+    border-radius: 0;
+    background-color: $black;
+    background-image: none;
+    // transition: transform 0.2s;
+    &:hover{
+      cursor: pointer;
+      @media screen and (min-width: $desktop) {transform: scale(1.1);}
+    }
+  }
+  &.volume.slider {
+    height: 4rem;
+    margin: 0;
+  }
+}
+
+// Volume
+.volume.container {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 1rem;
+  text-align: left;
+  .volume.text {
+    position: absolute;
+    top: 0;
+    left: 130%;
+    font-size: 1rem;
+    width: 5rem;
+    text-align: center;
+    transform: translateY(-130%) rotate(90deg);
+    transform-origin: 0% 100%
+  }
+}
+
+// Info boxes
+.info{
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.toggle-info {
+  position: absolute;
+  left: 102%;
+  top: 0;
+  font-size: .8rem;
+}
+
+// Icons
+.note {
+  height: 2.5rem;
+  width: auto;
+}
+.sound {
+  height: 1.5rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  opacity: .2;
+}
+
+// Swing Visualizer
+.swing-visualizer {
+  position: absolute;
+  top: 14.75rem;
+  left: -1.5rem;
+  width: 1.5rem;
+  height: 10.75rem;
+  opacity: 0.3;
+  border-top: 2px solid $black;
+  border-right: 2px solid $black;
+  .ee,.and,.uh {
+    border-top: 2px solid $black;
+    position: absolute;
+    right: 0;
+  }
+  .and {
+    width: 75%;
+  }
+  .ee,.uh {
+    width: 40%;
+  }
+  .note {
+    position: absolute;
+    left: -1.3rem;
+    top: -1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+// Italian
+.italian {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 5rem;
+  position: absolute;
+  left: 14.2rem; top: 14rem;
+  opacity: 0.3;
+  transform: rotate(270deg);
+  transform-origin: 0% 0%
+}
