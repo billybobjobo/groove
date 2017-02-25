@@ -13,53 +13,55 @@
 </head>
 
 <body>
-  
-<div class="loading">
-  <h1>GROOVE-O-NOME (1.0)</h1>
-</div>
-<div class="wrapper">
-  <h1 class="title">Groove-o-nome</h1>
-  <div class="section onoff">
-    <button class="-big" id="quarter"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/quarter.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
-    <button class="-big" id="eighth"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/eighth.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
-    <button class="-big" id="sixteenth"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
-    <div class="volume container"><span class="volume text">Vol</span>
-      <div class="slider volume slider ui"></div>
+  <head><link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/groove-favicon.png"/></head>
+<body>
+  <div class="loading">
+    <h1>GROOVE-O-NOME (1.0)</h1>
+  </div>
+  <div class="wrapper">
+    <h1 class="title">Groove-o-nome <span class="version">(1.0)</span></h1>
+    <div class="section onoff">
+      <button class="-big" id="quarter"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/quarter.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
+      <button class="-big" id="eighth"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/eighth.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
+      <button class="-big" id="sixteenth"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/><img class="sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sound.svg"/></button>
+      <div class="volume container"><span class="volume text">Vol</span>
+        <div class="slider volume slider ui"></div>
+      </div>
     </div>
+    <div class="section">Tempo
+      <input class="tempo spinner ui"/>
+      <div class="slider tempo slider ui"></div>
+    </div>
+    <div class="section has-info">8th Swing % 
+      <input class="eighthSwing spinner ui"/>
+      <div class="slider eighthSwing slider ui"></div>
+      <button class="toggle-info">Help</button>
+      <div class="info">This changes the swing of the 8th-note (the "and"). 0% places the 8th-note on the exact halfway point between beats. 100% places them a full 16th-note later (as if a dotted-8th/16th-note figure). 67% is a pure 8th-triplet swing.  NOTE:  8th-note swing does not effect 16th-note placement. They are independent in Groove-O-Nome.</div>
+    </div>
+    <div class="section has-info">16th Swing %
+      <input class="sixteenthSwing spinner ui"/>
+      <div class="slider sixteenthSwing slider ui"></div>
+      <button class="toggle-info">Help</button>
+      <div class="info">This changes the swing of the 16th-notes (the "ee" and "uh"). 0% places the 16th-notes on exact fourths of the beat. 100% places them a full 32nd-note later (as if a dotted-16th/32nd-note figure). 67% is a pure 16th triplet swing.  NOTE:  16th-note swing does not effect 8th-note placement. They are independent in Groove-O-Nome.</div>
+    </div>
+    <div class="section has-info">Random Mute % 
+      <input class="randMute spinner ui"/>
+      <div class="slider randMute slider ui"></div>
+      <button class="toggle-info">Help</button>
+      <div class="info">This changes the percentage chance that the metronome will randomly mute itself.  0% means every note is played.  100% means no notes are played.  This is great to test your internal sense of the time.  Set it to a high percentage and see if you can still play along!</div>
+    </div>
+    <div class="swing-visualizer"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/quarter.svg"/>
+      <div class="ee"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/></div>
+      <div class="and"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/eighth.svg"/></div>
+      <div class="uh"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/></div>
+    </div>
+    <ul class="italian">
+      <li>Allegro</li>
+      <li>Largo</li>
+    </ul>
   </div>
-  <div class="section">Tempo
-    <input class="tempo spinner ui"/>
-    <div class="slider tempo slider ui"></div>
-  </div>
-  <div class="section has-info">8th Swing % 
-    <input class="eighthSwing spinner ui"/>
-    <div class="slider eighthSwing slider ui"></div>
-    <button class="toggle-info">Help</button>
-    <div class="info">This changes the swing of the 8th-note (the "and"). 0% places the 8th-note on the exact halfway point between beats. 100% places them a full 16th-note later (as if a dotted-8th/16th-note figure). 67% is a pure 8th-triplet swing.  NOTE:  8th-note swing does not effect 16th-note placement. They are independent in Groove-O-Nome.</div>
-  </div>
-  <div class="section has-info">16th Swing %
-    <input class="sixteenthSwing spinner ui"/>
-    <div class="slider sixteenthSwing slider ui"></div>
-    <button class="toggle-info">Help</button>
-    <div class="info">This changes the swing of the 16th-notes (the "ee" and "uh"). 0% places the 16th-notes on exact fourths of the beat. 100% places them a full 32nd-note later (as if a dotted-16th/32nd-note figure). 67% is a pure 16th triplet swing.  NOTE:  16th-note swing does not effect 8th-note placement. They are independent in Groove-O-Nome.</div>
-  </div>
-  <div class="section has-info">Random Mute % 
-    <input class="randMute spinner ui"/>
-    <div class="slider randMute slider ui"></div>
-    <button class="toggle-info">Help</button>
-    <div class="info">This changes the percentage chance that the metronome will randomly mute itself.  0% means every note is played.  100% means no notes are played.  This is great to test your internal sense of the time.  Set it to a high percentage and see if you can still play along!</div>
-  </div>
-  <div class="swing-visualizer"> <img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/quarter.svg"/>
-    <div class="ee"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/></div>
-    <div class="and"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/eighth.svg"/></div>
-    <div class="uh"><img class="note" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/385326/sixteenth.svg"/></div>
-  </div>
-  <ul class="italian">
-    <li>Allegro</li>
-    <li>Largo</li>
-  </ul>
-</div>
-<p class="home">A <a href="http://barefootfunk.com">barefootfunk.com</a> project.</p>
+  <p class="home">A <a href="http://barefootfunk.com">barefootfunk.com</a> project.</p>
+</body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
