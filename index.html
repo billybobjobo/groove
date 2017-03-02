@@ -3,13 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Groove-o-nome (1.0)</title>
-    
+
   <link rel='stylesheet prefetch' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
   <link rel="stylesheet" href="css/style.css">
-  <head><link rel="shortcut icon" type="image/png" href="favicon.png"/></head>
-</head>
+  <!-- META INFO ADDED AFTER CODEPEN -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-<body>  
+    <meta itemprop="name" content="Groove-o-nome" />
+    <meta itemprop="image" content="http://groovebetter.com/screenshot.png" />
+    <meta itemprop="description" content="A simple, free metronome designed for serious musicians. Loud enough to hear backstage at a festival. 16th/8th note adjustable swing. Random muting feature to test internal sense of time. Rock solid time on all devices. Open source." />
+    <meta name="description" content="A simple, free metronome designed for serious musicians. Loud enough to hear backstage at a festival. 16th/8th note adjustable swing. Random muting feature to test internal sense of time. Rock solid time on all devices. Open source." />
+    <meta name="author" content="Bryant Smith" />
+
+    <meta property="article:published_time" content="2017-03-02T21:39:16+00:00" />
+    <meta property="article:section" content="Metronome" />
+
+    <meta property="og:title" content="Groove-o-nome" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="A simple, free metronome designed for serious musicians. Loud enough to hear backstage at a festival. 16th/8th note adjustable swing. Random muting feature to test internal sense of time. Rock solid time on all devices. Open source." />
+    <meta property="og:image" content="http://groovebetter.com/screenshot.png" />
+    <meta property="og:url" content="http://groovebetter.com" />
+    <meta property="og:site_name" content="Groove-o-nome" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Groove-o-nome">
+    <meta name="twitter:description" content="A simple, free metronome designed for serious musicians. Loud enough to hear backstage at a festival. 16th/8th note adjustable swing. Random muting feature to test internal sense of time. Rock solitime d on aldevicesm Open source.s.">
+    <meta name="twitter:image" content="http://groovebetter.com/screenshot.png">
+    <meta name="twitter:url" content="http://groovebetter.com">
+  <!-- END NON-CODEPEN META -->
+
+<body>
   <div class="loading">
     <h1>GROOVE-O-NOME (1.0)</h1>
   </div>
@@ -27,7 +50,7 @@
       <input class="tempo spinner ui"/>
       <div class="slider tempo slider ui"></div>
     </div>
-    <div class="section has-info">8th Swing % 
+    <div class="section has-info">8th Swing %
       <input class="eighthSwing spinner ui"/>
       <div class="slider eighthSwing slider ui"></div>
       <button class="toggle-info">Help</button>
@@ -39,7 +62,7 @@
       <button class="toggle-info">Help</button>
       <div class="info">This changes the swing of the 16th-notes (the "ee" and "uh"). 0% places the 16th-notes on exact fourths of the beat. 100% places them a full 32nd-note later (as if a dotted-16th/32nd-note figure). 67% is a pure 16th triplet swing.  NOTE:  16th-note swing does not effect 8th-note placement. They are independent in Groove-O-Nome.</div>
     </div>
-    <div class="section has-info">Random Mute % 
+    <div class="section has-info">Random Mute %
       <input class="randMute spinner ui"/>
       <div class="slider randMute slider ui"></div>
       <button class="toggle-info">Help</button>
